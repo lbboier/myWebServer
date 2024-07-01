@@ -33,6 +33,9 @@ public:
     sem(int val){
         sem_init(&m_sem,0,val);
     }
+    sem(){
+        sem_init(&m_sem,0,0);
+    }
     ~sem(){
         sem_destroy(&m_sem);
     }
